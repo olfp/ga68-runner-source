@@ -11,6 +11,10 @@ RUN apt-get update && apt-get install -y \
     python3-pip \
     && rm -rf /var/lib/apt/lists/*
 
+# 3a. CREATE SYMLINK: Maps 'ga68' to the actual installed compiler binary
+RUN ln -s /usr/bin/x86_64-linux-gnu-ga68-16 /usr/bin/ga68-16
+RUN ln -s /usr/bin/x86_64-linux-gnu-ga68-16 /usr/bin/ga68
+
 # 4. Inject your custom script into the global system path
 COPY u682a68 /usr/local/bin/u682a68
 
