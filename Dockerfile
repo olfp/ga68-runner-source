@@ -6,7 +6,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 # 3. Update repositories and install ga68 alongside Python 3 
 RUN apt-get update && apt-get install -y \
-    ga68-15-x86-64-linux-gnu \
+    ga68-16-x86-64-linux-gnu \
     python3 \
     python3-pip \
     && rm -rf /var/lib/apt/lists/*
